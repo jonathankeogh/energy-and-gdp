@@ -10,6 +10,8 @@ a single panel of **8,090 observations** across **200 countries**, using
 by inflation) and **primary** energy per capita (all energy, not just
 electricity).
 
+![Joint density of real GDP per capita and primary energy use per capita across 8,090 country-years, 1980–2023, on log–log axes. The high-income, low-energy corner is empty.](energy-gdp-chart.svg)
+
 ## Run it
 
 Standard library only — **no dependencies, no network**. Any Python 3.10+:
