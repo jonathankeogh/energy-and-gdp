@@ -1,7 +1,7 @@
 # There are no rich, low-energy countries
 
 Reproducible code and data behind the claim that, across the full 1980–2023
-record, **no economy has been rich while consuming little energy** — the
+record, **no economy has been rich while consuming little energy**, that the
 high-income, low-energy corner of the joint distribution is empty.
 
 The analysis merges every country-year for which both figures are reported into
@@ -14,7 +14,7 @@ electricity).
 
 ## Run it
 
-Standard library only — **no dependencies, no network**. Any Python 3.10+:
+Standard library only 
 
 ```bash
 python energy_gdp.py
@@ -25,8 +25,7 @@ This writes:
 - `energy-gdp-panel-1980-2023.csv` — the merged panel (one row per country-year)
 - `energy-gdp-chart.svg` — the log–log density chart
 
-and prints the headline statistics. The build is **deterministic**: the same
-inputs produce byte-identical outputs every run.
+and prints the headline statistics. 
 
 ## Expected output
 
@@ -54,7 +53,7 @@ empty corner: 0 of 1172 country-years with GDP >= $30k below 10,000 kWh (lowest:
 ## Data sources
 
 Both datasets are redistributed here **with attribution** under their open
-licences. Please cite them if you reuse the data.
+licences. 
 
 - **Primary energy per capita** — [Our World in Data](https://ourworldindata.org/energy),
   based on the Energy Institute *Statistical Review of World Energy* and the
@@ -70,4 +69,4 @@ entities remain (see `AGG` in `energy_gdp.py`).
 
 ## License
 
-Code: MIT (see `LICENSE`). Data: as noted above, © the respective providers.
+MIT. Data: as noted above, © the respective providers.
