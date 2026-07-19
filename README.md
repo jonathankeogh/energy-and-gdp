@@ -14,25 +14,30 @@ electricity).
 
 ## Run it
 
-Standard library only 
+Managed with [uv](https://docs.astral.sh/uv/); the analysis uses **numpy** and
+**pandas**. No network needed. From a clone:
 
 ```bash
-python energy_gdp.py
+uv run python energy_gdp.py
 ```
+
+`uv` reads `pyproject.toml` / `uv.lock`, builds the environment, and runs the
+script. (No uv? `pip install numpy pandas && python energy_gdp.py` works too.)
 
 This writes:
 
 - `energy-gdp-panel-1980-2023.csv` — the merged panel (one row per country-year)
 - `energy-gdp-chart.svg` — the log–log density chart
 
-and prints the headline statistics. 
+and prints the headline statistics. The build is **deterministic**: the same
+inputs produce the same outputs every run.
 
 ## Expected output
 
 ```
 n=8090  beta=1.028  r=0.899  rho=0.912  R2=0.809  rB=0.908  rW=0.677  betaW=0.795
 sigma=0.324 dex  (200 countries)
-empty corner: 0 of 1172 country-years with GDP >= $30k below 10,000 kWh (lowest: 12,160 kWh, Macao SAR, China 1991)
+empty corner: 0 of 1172 country-years with GDP >= $30,000 below 10,000 kWh (lowest: 12,160 kWh, Macao SAR, China 1991)
 ```
 
 ## Results in brief

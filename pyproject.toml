@@ -1,0 +1,10 @@
+[project]
+name = "energy-and-gdp"
+version = "1.0.0"
+description = "Reproducible analysis: there are no rich, low-energy countries"
+readme = "README.md"
+requires-python = ">=3.10"
+dependencies = [
+    "numpy>=1.26",
+    "pandas>=2.1",
+]
